@@ -2,7 +2,7 @@ version: '3'
 services:
   web:
     restart: always
-    image: node:latest
+    image: node:12.16.1
     working_dir: /src
     ports:
     - "7000:7000"
