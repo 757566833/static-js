@@ -4,5 +4,12 @@
     "koa-router": "^8.0.8",
     "koa-send": "^5.0.0",
     "koa2-cors": "^2.0.6"
+  },
+  "devDependencies": {
+    "@types/node": "^13.9.8",
+    "uglify-js": "^3.8.1"
+  },
+  "scripts": {
+    "buildIcon": "uglifyjs ./src/icon/4.0.0/umd/index.umd.js -c -m -o ./static/icon/4.0.0/umd/icon.min.js"
   }
 }
