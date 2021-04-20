@@ -8,4 +8,4 @@ services:
     - "7000:7000"
     volumes:
     - ./:/src
-    entrypoint: bash -c "npm install -production && node static.js"
+    entrypoint: bash -c "node index.js"
