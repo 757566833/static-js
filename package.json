@@ -21,7 +21,6 @@
     "webpack-cli": "4.6.0"
   },
   "scripts": {
-    "buildIcon": "uglifyjs ./src/icon/4.0.0/umd/index.umd.js -c -m -o ./static/icon/4.0.0/umd/icon.min.js",
     "build": "webpack --mode=production --env=production"
   }
 }
