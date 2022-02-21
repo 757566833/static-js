@@ -11,7 +11,7 @@ app.use(cors({
   // maxAge: 50000,
   credentials: true,
   allowMethods: ["GET", "PUT", "POST", "PATCH", "DELETE", "HEAD", "OPTIONS"],
-  allowHeaders: ["Content-Type", "Authorization", "Accept"],
+  allowHeaders: ["Content-Type", "Authorization", "Accept","egu-auth"],
 }));
 // router.get()
 router.get(['/', '/**'], async (ctx:any) => {
