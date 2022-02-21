@@ -9,7 +9,7 @@ const start = (url) => {
         if (iterator.startsWith('.') || iterator.endsWith('.gz')) {
             continue
         }
-        if (iterator.includes('.js') || iterator.includes('.css')|| iterator.includes('.woff2')|| iterator.includes('.less')) {
+        if (iterator.includes('.js') || iterator.includes('.css')|| iterator.includes('.woff2')|| iterator.includes('.less')|| iterator.includes('.svg')) {
             filelist.push([path.resolve(url, iterator), `${path.resolve(url,iterator)}.gz`])
         } else {
             start(path.resolve(url, iterator))
@@ -44,7 +44,7 @@ const timmer = setInterval(() => {
     if (index >= filelist.length) {
         clearInterval(timmer)
     }
-}, 1000);
+}, 100);
 // const inp = fs.createReadStream('./static/icon/4.0.0/umd/icon.min.js');
 // const out = fs.createWriteStream('./static/icon/4.0.0/umd/icon.min.js.gz');
 // filelist.forEach((item,index)=>{

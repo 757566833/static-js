@@ -15,10 +15,18 @@ app.use(cors({
 }));
 // router.get()
 router.get(['/', '/**'], async (ctx:any) => {
-  await send(ctx, ctx.path, {
-    root: path.join(__dirname, 'static'),
-    maxAge: 365 * 24 * 60 * 60 * 1000
-  });
+  if(ctx.path.endsWith("json")){
+    await send(ctx, ctx.path, {
+      root: path.join(__dirname, 'static'),
+      maxAge: 0
+    });
+  }else{
+    await send(ctx, ctx.path, {
+      root: path.join(__dirname, 'static'),
+      maxAge: 365 * 24 * 60 * 60 * 1000
+    });
+  }
+ 
 })
 
 
