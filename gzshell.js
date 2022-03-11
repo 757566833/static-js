@@ -9,7 +9,7 @@ const start = (url) => {
         if (iterator.startsWith('.') || iterator.endsWith('.gz')) {
             continue
         }
-        if (iterator.includes('.js') || iterator.includes('.css')|| iterator.includes('.woff2')|| iterator.includes('.less')|| iterator.includes('.svg')) {
+        if (iterator.includes('.js') || iterator.includes('.css')|| iterator.includes('.woff2')|| iterator.includes('.less')|| iterator.includes('.svg')||iterator.includes('.woff')) {
             filelist.push([path.resolve(url, iterator), `${path.resolve(url,iterator)}.gz`])
         } else {
             start(path.resolve(url, iterator))
